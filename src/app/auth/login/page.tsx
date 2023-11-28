@@ -9,7 +9,7 @@ export default function LoginPage() {
         <div className='contenedor-login' id='login'>
           <div className='encabezado'>
             <span>
-              No tienes una cuenta <Link href='/registro'> Regístrate </Link>{' '}
+              No tienes una cuenta <Link href='/auth/signin'> Regístrate </Link>{' '}
             </span>
             <h1 className='titulo'>Inicio de Sesión</h1>
           </div>
