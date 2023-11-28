@@ -1,91 +1,57 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import './stylesRegistro.css';
 
 export default function SignIn() {
   return (
-    <main className='flex justify-center items-center h-screen bg-blue-300'>
-      <aside className='bg-indigo-700 self-center h-1/2 rounded-s-2xl'>
-        <Image
-          className='rounded-s-2xl'
-          src='/login-car.png'
-          width={350}
-          height={500}
-          style={{ objectFit: 'contain' }}
-          sizes='(max-width: 768px) 100vw, 33vw'
-          alt='Car image'
-        />
-      </aside>
-      <section className='bg-white flex flex-col align-center p-10 h-1/2 rounded-e-2xl'>
-        <h2 className='text-center font-extrabold text-2xl'>Registro</h2>
-        <form
-          className='flex flex-col align-center content-center justify-center gap-3'
-          action=''
-        >
-          <div className='flex flex-col'>
-            <label className='font-semibold text-lg' htmlFor=''>
-              Sucursal
-            </label>
-            <select
-              className='rounded-xl p-3'
-              name=''
-              id=''
-              placeholder='Bogotá'
-            >
-              <option value=''>Medellin</option>
-              <option value=''>Cali</option>
-            </select>
+    <div className='wrapper'>
+      <div className='form-box'>
+        <div className='contenedor-registro' id='registro'>
+          <div className='tituloR'>Registrate</div>
+          <div className='encabezado'>
+            <span>
+              ¿Ya tienes una cuenta?
+              <Link href='/auth/login'> Inicia Sesión </Link>
+            </span>
           </div>
-          <div className='flex flex-col'>
-            <label className='font-semibold text-lg' htmlFor=''>
-              Cargo
-            </label>
-            <select
-              className='rounded-xl p-3'
-              name=''
-              id=''
-              placeholder='123456'
-            >
-              <option value=''>Gerente</option>
-              <option value=''>Vendedor</option>
-            </select>
+          <div className='dos-forms'>
+            <div className='caja-entrada'>
+              <input type='text' className='entrada' placeholder='Nombres' />
+              <i className='bx bx-user'></i>
+            </div>
+            <div className='caja-entrada'>
+              <input type='text' className='entrada' placeholder='Apellidos' />
+              <i className='bx bx-user'></i>
+            </div>
           </div>
-          <div className='flex flex-col'>
-            <label className='font-semibold text-lg' htmlFor=''>
-              Fecha de Nacimiento
-            </label>
-            <input type='date' name='' id='' />
+          <div className='caja-entrada'>
+            <input type='text' className='entrada' placeholder='Email' />
+            <i className='bx bx-envelope'></i>
           </div>
-          <div className='flex flex-col'>
-            <label className='font-semibold text-lg' htmlFor='password'>
-              Contraseña:
-            </label>
+          <div className='caja-entrada'>
             <input
-              className='rounded-xl p-3'
               type='password'
-              name='password'
-              id='password'
-              placeholder='********'
+              className='entrada'
+              placeholder='Contraseña'
             />
+            <i className='bx bx-lock-alt'></i>
           </div>
-          <div className='flex flex-col'>
-            <label className='font-semibold text-lg' htmlFor='password'>
-              Repita su Contraseña:
-            </label>
-            <input
-              className='rounded-xl p-3'
-              type='password'
-              name='password'
-              id='password'
-              placeholder='********'
-            />
+          <div className='caja-entrada'>
+            <input type='submit' className='boton-enviar' value='Registrate' />
           </div>
-          <button
-            className='bg-indigo-900 rounded-xl p-3 font-semibold text-lg text-white'
-            type='submit'
-          >
-            Regístrate
-          </button>
-        </form>
-      </section>
-    </main>
+          <div className='dos-columnas'>
+            <div className='uno'>
+              <input type='checkbox' id='registro-check' />
+              <label htmlFor='registro-check'> Recuerdame </label>
+            </div>
+            <div className='dos'>
+              <label>
+                <a href='#'>Terminos & condiciones</a>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

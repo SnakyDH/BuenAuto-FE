@@ -1,6 +1,4 @@
-/*
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*/
 
 * {
     margin: 0;
@@ -17,25 +15,26 @@ body {
     overflow: hidden;
 }
 
-.contenedor {
+.wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-.caja-formulario {
+.form-box {
+    
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 512px;
-    height: 420px;
+    height: 720px;
     overflow: hidden;
     z-index: 2;
 }
 
-.contenedor-login {
+.contenedor-registro {
     position: absolute;
     left: 4px;
     width: 100%;
@@ -59,9 +58,10 @@ body {
     margin-left: 5px;
 }
 
-.titulo {
+.tituloR {
     color: #fff;
-    font-size: 30px;
+    font-weight: 700;
+    font-size: 35px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -140,12 +140,12 @@ body {
 
 /* Estilos responsivos */
 @media only screen and (max-width: 286px) {
-    .caja-formulario {
+    .form-box {
         width: 80%;
         height: auto;
     }
 
-    .contenedor-login {
+    .contenedor-registro {
         padding: 10px;
     }
 }
