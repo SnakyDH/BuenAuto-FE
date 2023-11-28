@@ -1,9 +1,10 @@
-import Image from 'next/image';
+import React from 'react';
 import Link from 'next/link';
-import './globals.css';
+import Image from 'next/image';
+import './mainPage.css';
 import 'boxicons/css/boxicons.min.css';
 
-export default function Home() {
+export default function userPage() {
   return (
     <div id='__next'>
       <header>
@@ -25,27 +26,19 @@ export default function Home() {
               <a href='#home'> Home </a>
             </li>
             <li>
-              <a href='#service'> Servicios </a>
+              <a href='#service'> Reporte de Servicios </a>
+            </li>
+
+            <li>
+              <a href='#reseñas'> Reportes de Venta </a>
             </li>
             <li>
-              <a href='#vehiculos'> Vehiculos </a>
+              <a href='#acerca'> Reporte de Empleados </a>
             </li>
             <li>
-              <a href='#reseñas'> Venta </a>
-            </li>
-            <li>
-              <a href='#acerca'> Acerca de nosotros </a>
+              <a href='#acerca'> Reporte de vehiculos </a>
             </li>
           </ul>
-        </div>
-
-        <div className='header-btn'>
-          <Link href='auth/login' className='btn btn-inicio'>
-            Iniciar Sesion
-          </Link>
-          <Link href='auth/signin' className='btn btn-registrarse'>
-            Registrarse
-          </Link>
         </div>
       </header>
 
@@ -163,7 +156,7 @@ export default function Home() {
 
           <div className='caja-vehiculos'>
             <div className='img-vehiculos'>
-              <Image src='/img/car3.jpg' width={640} height={427} alt='' />
+              <Image src='/img/car3.jpg' width={640} height={475} alt='' />
             </div>
             <p>2019</p>
             <h3>Toyota Corolla</h3>
@@ -177,7 +170,7 @@ export default function Home() {
 
           <div className='caja-vehiculos'>
             <div className='img-vehiculos'>
-              <Image src='/img/car4.jpg' width={640} height={427} alt='' />
+              <Image src='/img/car4.jpg' width={640} height={50000} alt='' />
             </div>
             <p>2019</p>
             <h3>Toyota Corolla</h3>
@@ -308,7 +301,7 @@ export default function Home() {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.{' '}
+              sunt in culpa qui officia deserunt mollit anim id est laborum..{' '}
             </p>
             <a href='#' className='btn'>
               Leer mas

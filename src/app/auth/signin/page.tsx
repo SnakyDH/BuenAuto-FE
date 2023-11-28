@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import './stylesRegistro.css';
+import 'boxicons/css/boxicons.min.css';
 
 export default function SignIn() {
   return (
