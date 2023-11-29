@@ -36,9 +36,6 @@ export default function Home() {
           <Link href='auth/login' className='btn btn-inicio'>
             Iniciar Sesion
           </Link>
-          <Link href='auth/signin' className='btn btn-registrarse'>
-            Registrarse
-          </Link>
         </div>
       </header>
 
