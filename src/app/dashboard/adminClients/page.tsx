@@ -3,20 +3,20 @@ import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import './styleEmploye.css';
 
-export default function PageEmployee() {
+export default function PageClientes() {
   return (
     <div>
       <Navbar></Navbar>
       <section className='empleados' id='empleados'>
         <div className='tituloEmpleados'>
-          <span> Empleados </span>
-          <h2>Información de nuestros empleados </h2>
+          <span> Clientes </span>
+          <h2>Información de nuestros Clientes </h2>
         </div>
 
         <div className='botones'>
-          <button className='boton'>Agregar Empleado</button>
-          <button className='boton'>Eliminar Empleado</button>
-          <button className='boton'>Modificar Empleado</button>
+          <button className='boton'>Agregar Cliente</button>
+          <button className='boton'>Eliminar Cliente</button>
+          <button className='boton'>Modificar Cliente</button>
           <button className='boton'>Descargar Reporte</button>
         </div>
 
@@ -31,10 +31,7 @@ export default function PageEmployee() {
               />
             </div>
             <h3>Carlos Grillo</h3>
-            <p>Código: EMP001</p>
-            <p>Cargo: Desarrollador</p>
-            <p>Sucursal: Sucursal A</p>
-            <p>Salario: $50,000</p>
+            <p>Ciudad: Cali</p>
             <p>Fecha de Ingreso: 01/01/2022</p>
           </div>
 
@@ -48,11 +45,8 @@ export default function PageEmployee() {
               />
             </div>
             <h3>Pepe Perez</h3>
-            <p>Código: EMP002</p>
-            <p>Cargo: Diseñador</p>
-            <p>Sucursal: Sucursal B</p>
-            <p>Salario: $45,000</p>
-            <p>Fecha de Ingreso: 02/01/2022</p>
+            <p>Ciudad: Bogota</p>
+            <p>Fecha de Ingreso: 31/12/2021</p>
           </div>
 
           <div className='cajaEmpleado'>
@@ -65,11 +59,8 @@ export default function PageEmployee() {
               />
             </div>
             <h3>Angelica Martinez</h3>
-            <p>Código: EMP003</p>
-            <p>Cargo: Gerente</p>
-            <p>Sucursal: Sucursal C</p>
-            <p>Salario: $70,000</p>
-            <p>Fecha de Ingreso: 03/01/2022</p>
+            <p>Ciudad: Puerto Inirida</p>
+            <p>Fecha de Ingreso: 8/03/2023</p>
           </div>
 
           <div className='cajaEmpleado'>
@@ -81,12 +72,10 @@ export default function PageEmployee() {
                 alt='Empleado 3'
               />
             </div>
-            <h3>Angelica Martinez</h3>
-            <p>Código: EMP003</p>
-            <p>Cargo: Gerente</p>
-            <p>Sucursal: Sucursal C</p>
-            <p>Salario: $70,000</p>
-            <p>Fecha de Ingreso: 03/01/2022</p>
+            <h3> </h3>
+            <h3>Albin la Ardilla</h3>
+            <p>Ciudad: Pereira</p>
+            <p>Fecha de Ingreso: 11/05/2022</p>
           </div>
 
           <div className='cajaEmpleado'>
@@ -98,12 +87,9 @@ export default function PageEmployee() {
                 alt='Empleado 3'
               />
             </div>
-            <h3>Angelica Martinez</h3>
-            <p>Código: EMP003</p>
-            <p>Cargo: Gerente</p>
-            <p>Sucursal: Sucursal C</p>
-            <p>Salario: $70,000</p>
-            <p>Fecha de Ingreso: 03/01/2022</p>
+            <h3>Maria Jose Buñuelo</h3>
+            <p>Ciudad: Villavicencio </p>
+            <p>Fecha de Ingreso: 01/01/2022</p>
           </div>
 
           <div className='cajaEmpleado'>
@@ -115,12 +101,9 @@ export default function PageEmployee() {
                 alt='Empleado 3'
               />
             </div>
-            <h3>Angelica Martinez</h3>
-            <p>Código: EMP003</p>
-            <p>Cargo: Gerente</p>
-            <p>Sucursal: Sucursal C</p>
-            <p>Salario: $70,000</p>
-            <p>Fecha de Ingreso: 03/01/2022</p>
+            <h3>Caitlyn Kiraman</h3>
+            <p>Ciudad: Piltover</p>
+            <p>Fecha de Ingreso: 01/01/2022</p>
           </div>
         </div>
       </section>
