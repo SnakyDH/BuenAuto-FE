@@ -1,20 +1,12 @@
 'use client';
-import './menuUsuario.css';
-import './inicioUsuario.css';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { FiAlignRight } from 'react-icons/fi'; // Importa FiAlignRight
+import Navbar from '../components/Navbar';
 
 export default function UsersPage() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  // Función para cambiar el estado y mostrar/ocultar la barra
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [connectionTime, setConnectionTime] = useState(new Date());
+  const [connectionTime, setConnectionTime] = useState(new Date()); // Guarda la hora de tiempo conectado JWT
 
   // Función para actualizar la hora cada segundo
   useEffect(() => {
@@ -40,55 +32,10 @@ export default function UsersPage() {
 
   return (
     <div>
-      <div
-        id='barra-menu'
-        className={`barra bar-menu menu-icon ${isMenuOpen ? 'active' : ''}`}
-        onClick={toggleMenu}
-      >
+      <div id='barra-menu'>
         <FiAlignRight />
       </div>
-
-      <header className={`${isMenuOpen ? 'active' : ''}`}>
-        <a href='#' className='logo'>
-          <span> Bienvenido </span> Nombre [Cargo empleado]
-        </a>
-
-        <nav className='navbar'>
-          <ul className='navbar__menu'>
-            <li className='navbar__menu--item'>
-              <a href='#Inicio' className='navbar__menu--link'>
-                Inicio
-              </a>
-            </li>
-            <li className='navbar__menu--item'>
-              <a href='#Homologaciones' className='navbar__menu--link'>
-                Administrar Clientes
-              </a>
-            </li>
-            <li className='navbar__menu--item'>
-              <a href='#Solicitudes' className='navbar__menu--link'>
-                Administrar Vehiculos
-              </a>
-            </li>
-            <li className='navbar__menu--item'>
-              <a href='#Usuarios' className='navbar__menu--link'>
-                Transacciones
-              </a>
-            </li>
-            <li className='navbar__menu--item'>
-              <a href='#Configuracion' className='navbar__menu--link'>
-                Informacion Personal
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        <div className='navbar__toggle' id='mobile-menu'>
-          <span className='bar'></span> <span className='bar'></span>{' '}
-          <span className='bar'></span>
-        </div>
-      </header>
-
+      <Navbar></Navbar>
       <main>
         <section className='homeUser' id='homeUser'>
           <div className='text'>
