@@ -6,7 +6,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './styleOffices.css';
-import { GrCaretNext, GrCaretPrevious } from 'react-icons/gr';
 
 const slidesData = [
   {
@@ -91,6 +90,3 @@ const AdminOffices: React.FC = () => {
 };
 
 export default AdminOffices;
-function setCurrentSlide(arg0: (prevSlide: any) => number) {
-  throw new Error('Function not implemented.');
-}

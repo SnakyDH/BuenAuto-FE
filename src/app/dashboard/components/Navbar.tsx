@@ -66,11 +66,6 @@ export default function Navbar() {
                 Administrar Sucursales
               </Link>
             </li>
-            <li className='navbar__menu--item'>
-              <a href='/dashboard/infoPer' className='navbar__menu--link'>
-                Informacion Personal
-              </a>
-            </li>
           </ul>
         </nav>
 
