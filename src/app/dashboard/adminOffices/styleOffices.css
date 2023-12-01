@@ -1,0 +1,132 @@
+.title {
+  font-size: 5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  text-align: start;
+  color: #e38528;
+}
+
+.btnSucur{
+ text-align: end;
+}
+
+.btnSucur button{
+  background-color: #474fa0;
+  color: #fff;
+  margin-right: 4rem;
+  font-size: 2rem;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btnSucur button:hover{
+  background-color: #e38528;
+}
+
+.slider {
+  overflow: hidden;
+  padding-top: 5rem;
+  width: 100%;
+  max-width: 150rem; /* Ajusta según sea necesario */
+  margin: 0 auto;
+  position: relative;
+}
+.cards-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  width: 150rem; /* Ajusta según sea necesario */
+  height: 60rem;
+  align-items:center;
+  margin-right: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-btn:first-child {
+  left: 0;
+}
+
+.nav-btn:last-child {
+  right: 0;
+}
+
+.content {
+  display: flex;
+}
+
+.cityImage{
+  width: 90rem;
+  height: 60rem;
+  object-fit: cover;
+}
+
+.card img {
+  object-fit: cover;
+}
+.infoContainer {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoContainer h3 {
+  padding-top: 3rem;
+  font-size: 5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.infoContainer h4 {
+  font-size: 2rem;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  color: #474fa0;
+}
+
+.infoContainer p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.infoContainer .buttons {
+  display: flex;
+}
+
+.infoContainer button {
+  width: 20rem;
+  height: 5rem;
+  background-color: #474fa0;
+  color: #fff;
+  margin-top: rem;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  margin-right: 1rem; /* Ajusta el espacio entre los botones según sea necesario */
+}
+
+.infoContainer button:hover {
+  background-color: #e38528;
+}
