@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import { CiUser } from 'react-icons/ci';
 import './stylesLogin.css';
 
 export default function LoginPage() {
@@ -16,7 +15,9 @@ export default function LoginPage() {
               className='entrada'
               placeholder='Codigo de Usuario'
             />
-            <i className='bx bx-user'></i>
+            <i className='logo'>
+              <CiUser />
+            </i>
           </div>
           <div className='caja-entrada'>
             <input
@@ -24,7 +25,9 @@ export default function LoginPage() {
               className='entrada'
               placeholder='Contraseña'
             />
-            <i className='bx bx-lock-alt'></i>
+            <i className='logo'>
+              <CiUser />
+            </i>
           </div>
           <div className='caja-entrada'>
             <input
