@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar';
 import Image from 'next/image';
 import './styleEmploye.css';
+import Link from 'next/link';
 
 export default function PageEmployee() {
   return (
@@ -14,9 +15,14 @@ export default function PageEmployee() {
         </div>
 
         <div className='botones'>
-          <button className='boton'>Agregar Empleado</button>
-          <button className='boton'>Eliminar Empleado</button>
-          <button className='boton'>Modificar Empleado</button>
+          <button className='boton'>
+            <Link
+              href='/dashboard/Forms/employe'
+              className='navbar__menu--link'
+            >
+              Agregar Empleado
+            </Link>
+          </button>
           <button className='boton'>Descargar Reporte</button>
         </div>
 
@@ -36,6 +42,10 @@ export default function PageEmployee() {
             <p>Sucursal: Sucursal A</p>
             <p>Salario: $50,000</p>
             <p>Fecha de Ingreso: 01/01/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Empleado</button>
+              <button className='btnc'>Modificar Empleado</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -53,6 +63,10 @@ export default function PageEmployee() {
             <p>Sucursal: Sucursal B</p>
             <p>Salario: $45,000</p>
             <p>Fecha de Ingreso: 02/01/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Empleado</button>
+              <button className='btnc'>Modificar Empleado</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -70,6 +84,10 @@ export default function PageEmployee() {
             <p>Sucursal: Sucursal C</p>
             <p>Salario: $70,000</p>
             <p>Fecha de Ingreso: 03/01/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Empleado</button>
+              <button className='btnc'>Modificar Empleado</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -87,6 +105,10 @@ export default function PageEmployee() {
             <p>Sucursal: Sucursal C</p>
             <p>Salario: $70,000</p>
             <p>Fecha de Ingreso: 03/01/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Empleado</button>
+              <button className='btnc'>Modificar Empleado</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -104,6 +126,10 @@ export default function PageEmployee() {
             <p>Sucursal: Sucursal C</p>
             <p>Salario: $70,000</p>
             <p>Fecha de Ingreso: 03/01/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Empleado</button>
+              <button className='btnc'>Modificar Empleado</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -121,6 +147,10 @@ export default function PageEmployee() {
             <p>Sucursal: Sucursal C</p>
             <p>Salario: $70,000</p>
             <p>Fecha de Ingreso: 03/01/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Empleado</button>
+              <button className='btnc'>Modificar Empleado</button>
+            </div>
           </div>
         </div>
       </section>

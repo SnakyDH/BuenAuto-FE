@@ -1,5 +1,6 @@
 'use client';
 import Navbar from '../components/Navbar';
+import Link from 'next/link';
 import Image from 'next/image';
 import './styleEmploye.css';
 
@@ -14,9 +15,15 @@ export default function PageClientes() {
         </div>
 
         <div className='botones'>
-          <button className='boton'>Agregar Cliente</button>
-          <button className='boton'>Eliminar Cliente</button>
-          <button className='boton'>Modificar Cliente</button>
+          <button className='boton'>
+            {' '}
+            <Link
+              href='/dashboard/Forms/clients'
+              className='navbar__menu--link'
+            >
+              Agregar Cliente
+            </Link>
+          </button>
           <button className='boton'>Descargar Reporte</button>
         </div>
 
@@ -33,6 +40,10 @@ export default function PageClientes() {
             <h3>Carlos Grillo</h3>
             <p>Ciudad: Cali</p>
             <p>Fecha de Ingreso: 01/01/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Cliente</button>
+              <button className='btnc'>Modificar Cliente</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -47,6 +58,10 @@ export default function PageClientes() {
             <h3>Pepe Perez</h3>
             <p>Ciudad: Bogota</p>
             <p>Fecha de Ingreso: 31/12/2021</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Cliente</button>
+              <button className='btnc'>Modificar Cliente</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -61,6 +76,10 @@ export default function PageClientes() {
             <h3>Angelica Martinez</h3>
             <p>Ciudad: Puerto Inirida</p>
             <p>Fecha de Ingreso: 8/03/2023</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Cliente</button>
+              <button className='btnc'>Modificar Cliente</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -76,6 +95,10 @@ export default function PageClientes() {
             <h3>Albin la Ardilla</h3>
             <p>Ciudad: Pereira</p>
             <p>Fecha de Ingreso: 11/05/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Cliente</button>
+              <button className='btnc'>Modificar Cliente</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -90,6 +113,10 @@ export default function PageClientes() {
             <h3>Maria Jose Buñuelo</h3>
             <p>Ciudad: Villavicencio </p>
             <p>Fecha de Ingreso: 01/01/2022</p>
+            <div className='botonCard'>
+              <button className='btnc'>Eliminar Cliente</button>
+              <button className='btnc'>Modificar Cliente</button>
+            </div>
           </div>
 
           <div className='cajaEmpleado'>
@@ -104,6 +131,8 @@ export default function PageClientes() {
             <h3>Caitlyn Kiraman</h3>
             <p>Ciudad: Piltover</p>
             <p>Fecha de Ingreso: 01/01/2022</p>
+            <button className='btnc'>Eliminar Cliente</button>
+            <button className='btnc'>Modificar Cliente</button>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import './styleCars.css';
 
@@ -18,7 +19,11 @@ export default function adminCars() {
         <div className='buscador'>
           <input className='barr' type='text' placeholder='Buscar vehiculos' />
           <button className='btn'>Buscar</button>
-          <button className='btn'>Añadir Vehiculo</button>
+          <button className='btn'>
+            <Link href='/dashboard/Forms/cars' className='navbar__menu--link'>
+              Comprar Vehiculo
+            </Link>
+          </button>
         </div>
 
         <button className='btnUs'>Todos</button>
@@ -36,7 +41,7 @@ export default function adminCars() {
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
             <a href='#' className='btn'>
-              Compralo ahora
+              Vender vehiculo
             </a>
             <a href='#' className='btn'>
               Actualizar
@@ -56,7 +61,7 @@ export default function adminCars() {
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
             <a href='#' className='btn'>
-              Compralo ahora
+              Vender vehiculo
             </a>
             <a href='#' className='btn'>
               Actualizar
@@ -76,7 +81,7 @@ export default function adminCars() {
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
             <a href='#' className='btn'>
-              Compralo ahora
+              Vender vehiculo
             </a>
             <a href='#' className='btn'>
               Actualizar
@@ -96,7 +101,7 @@ export default function adminCars() {
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
             <a href='#' className='btn'>
-              Compralo ahora
+              Vender vehiculo
             </a>
             <a href='#' className='btn'>
               Actualizar
@@ -116,7 +121,7 @@ export default function adminCars() {
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
             <a href='#' className='btn'>
-              Compralo ahora
+              Vender vehiculo
             </a>
             <a href='#' className='btn'>
               Actualizar
@@ -136,7 +141,7 @@ export default function adminCars() {
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
             <a href='#' className='btn'>
-              Compralo ahora
+              Vender vehiculo
             </a>
             <a href='#' className='btn'>
               Actualizar
