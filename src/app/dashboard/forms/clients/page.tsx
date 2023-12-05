@@ -1,5 +1,5 @@
 import { CiUser } from 'react-icons/ci';
-import '../EstilosFormularios.css';
+import '../estilosFormularios.css';
 
 function fechaActual() {
   let fecha = new Date();
@@ -14,40 +14,35 @@ function obtenerId_Ciuddad() {
   // Obtener el id de la ciudad usando Post en la ruta /api/ciudad
 }
 
-export default function formOffice() {
+export default function formClients() {
   return (
     <div className='contenedor'>
       <div className='caja-formulario'>
         <div className='contenedor-login' id='login'>
           <div className='encabezado'>
-            <h1 className='titulo'>Registro de Sucursal</h1>
+            <h1 className='titulo'>Ingresar Cliente</h1>
           </div>
           <div className='caja-entrada'>
             <input
               type='text'
               className='entrada'
-              placeholder='Nombre de la sucursal'
+              placeholder='Nombre del cliente'
             />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input
-              type='text'
-              className='entrada'
-              placeholder='Nombre de la ciudad'
-            />
+            <input type='text' className='entrada' placeholder='Ciudad' />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
-
           <div className='caja-entrada'>
             <input
               type='submit'
               className='boton-enviar'
-              value='Registrar Sucursal'
+              value='Crear Cliente'
             />
           </div>
         </div>

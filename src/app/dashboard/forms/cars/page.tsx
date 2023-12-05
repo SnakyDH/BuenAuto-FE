@@ -1,24 +1,5 @@
 import { CiUser } from 'react-icons/ci';
-import '../EstilosFormularios.css';
-
-function generacionDeCodigo() {
-  // Generar un codigo de 3 letras y 3 numeros
-  // Ejemplo: EMP001
-}
-
-function validarCargo() {}
-
-function ValidarSucursal() {
-  // Obtener el id de la ciudad usando Post en la ruta /api/ciudad
-}
-
-function obtenerSalario() {
-  // Obtener el salario usando Post en la ruta /api/salario
-}
-
-function getFechaIngreso() {
-  // Obtener la fecha de ingreso usando Post en la ruta /api/fechaIngreso
-}
+import '../estilosFormularios.css';
 
 function fechaActual() {
   let fecha = new Date();
@@ -29,48 +10,60 @@ function fechaActual() {
   return fechaActual;
 }
 
-export default function formEmploye() {
+function obtenerId_Ciuddad() {
+  // Obtener el id de la ciudad usando Post en la ruta /api/ciudad
+}
+
+export default function formCars() {
   return (
     <div className='contenedor'>
       <div className='caja-formulario'>
         <div className='contenedor-login' id='login'>
           <div className='encabezado'>
-            <h1 className='titulo'>Registrar Empleado</h1>
+            <h1 className='titulo'>Ingresar Vehiculo</h1>
           </div>
           <div className='caja-entrada'>
             <input
               type='text'
               className='entrada'
-              placeholder='Nombre del empleado'
+              placeholder='Nombre de la linea'
             />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Cargo' />
+            <input type='text' className='entrada' placeholder='Color' />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Ciudad' />
+            <input type='text' className='entrada' placeholder='Marca' />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input
-              type='text'
-              className='entrada'
-              placeholder='Fecha de Nacimiento'
-            />
+            <input type='text' className='entrada' placeholder='Tipo' />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Salario' />
+            <input type='text' className='entrada' placeholder='Modelo' />
+            <i className='logo'>
+              <CiUser />
+            </i>
+          </div>
+          <div className='caja-entrada'>
+            <input type='text' className='entrada' placeholder='Placa' />
+            <i className='logo'>
+              <CiUser />
+            </i>
+          </div>
+          <div className='caja-entrada'>
+            <input type='text' className='entrada' placeholder='Valor' />
             <i className='logo'>
               <CiUser />
             </i>
@@ -79,7 +72,7 @@ export default function formEmploye() {
             <input
               type='submit'
               className='boton-enviar'
-              value='Registrar Empleado'
+              value='Registrar Vehiculo'
             />
           </div>
         </div>

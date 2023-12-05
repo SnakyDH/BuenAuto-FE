@@ -1,5 +1,24 @@
 import { CiUser } from 'react-icons/ci';
-import '../EstilosFormularios.css';
+import '../estilosFormularios.css';
+
+function generacionDeCodigo() {
+  // Generar un codigo de 3 letras y 3 numeros
+  // Ejemplo: EMP001
+}
+
+function validarCargo() {}
+
+function ValidarSucursal() {
+  // Obtener el id de la ciudad usando Post en la ruta /api/ciudad
+}
+
+function obtenerSalario() {
+  // Obtener el salario usando Post en la ruta /api/salario
+}
+
+function getFechaIngreso() {
+  // Obtener la fecha de ingreso usando Post en la ruta /api/fechaIngreso
+}
 
 function fechaActual() {
   let fecha = new Date();
@@ -10,60 +29,48 @@ function fechaActual() {
   return fechaActual;
 }
 
-function obtenerId_Ciuddad() {
-  // Obtener el id de la ciudad usando Post en la ruta /api/ciudad
-}
-
-export default function formCars() {
+export default function formEmploye() {
   return (
     <div className='contenedor'>
       <div className='caja-formulario'>
         <div className='contenedor-login' id='login'>
           <div className='encabezado'>
-            <h1 className='titulo'>Ingresar Vehiculo</h1>
+            <h1 className='titulo'>Registrar Empleado</h1>
           </div>
           <div className='caja-entrada'>
             <input
               type='text'
               className='entrada'
-              placeholder='Nombre de la linea'
+              placeholder='Nombre del empleado'
             />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Color' />
+            <input type='text' className='entrada' placeholder='Cargo' />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Marca' />
+            <input type='text' className='entrada' placeholder='Ciudad' />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Tipo' />
+            <input
+              type='text'
+              className='entrada'
+              placeholder='Fecha de Nacimiento'
+            />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Modelo' />
-            <i className='logo'>
-              <CiUser />
-            </i>
-          </div>
-          <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Placa' />
-            <i className='logo'>
-              <CiUser />
-            </i>
-          </div>
-          <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Valor' />
+            <input type='text' className='entrada' placeholder='Salario' />
             <i className='logo'>
               <CiUser />
             </i>
@@ -72,7 +79,7 @@ export default function formCars() {
             <input
               type='submit'
               className='boton-enviar'
-              value='Registrar Vehiculo'
+              value='Registrar Empleado'
             />
           </div>
         </div>
