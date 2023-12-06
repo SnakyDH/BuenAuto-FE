@@ -1,5 +1,8 @@
+'use client';
 import { CiUser } from 'react-icons/ci';
 import '../estilosFormularios.css';
+import { useFormState } from 'react-dom';
+import { useState } from 'react';
 
 function fechaActual() {
   let fecha = new Date();
@@ -10,30 +13,106 @@ function fechaActual() {
   return fechaActual;
 }
 
-function obtenerId_Ciuddad() {
-  // Obtener el id de la ciudad usando Post en la ruta /api/ciudad
-}
+type createClient = {
+  id: string;
+  name: string;
+  city: string;
+  sucursal: string;
+  phone: string;
+};
 
-export default function formClients() {
+export default function FormClients() {
+  const [client, setClient] = useState<createClient>({
+    id: '',
+    name: '',
+    city: '',
+    sucursal: '',
+    phone: '',
+  });
+
+  function handleSubmit(event: any) {
+    console.log(client);
+    event.preventDefault();
+
+    fetch('http://localhost:3011/client', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(client),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
+
   return (
     <div className='contenedor'>
-      <div className='caja-formulario'>
+      <form className='caja-formulario'>
         <div className='contenedor-login' id='login'>
           <div className='encabezado'>
             <h1 className='titulo'>Ingresar Cliente</h1>
+          </div>
+
+          <div className='caja-entrada'>
+            <input
+              type='text'
+              className='entrada'
+              placeholder='Cedula o id'
+              onChange={(e) => {
+                const id = e.target.value;
+                console.log(id);
+                setClient({ ...client, id });
+              }}
+            />
+
+            <i className='logo'>
+              <CiUser />
+            </i>
           </div>
           <div className='caja-entrada'>
             <input
               type='text'
               className='entrada'
-              placeholder='Nombre del cliente'
+              placeholder='Nombre del Cliente'
+              onChange={(e) => {
+                const name = e.target.value;
+                console.log(name);
+                setClient({ ...client, name });
+              }}
             />
             <i className='logo'>
               <CiUser />
             </i>
           </div>
           <div className='caja-entrada'>
-            <input type='text' className='entrada' placeholder='Ciudad' />
+            <input
+              type='text'
+              className='entrada'
+              placeholder='Ciudad'
+              onChange={(e) => {
+                const city = e.target.value;
+                console.log(city);
+                setClient({ ...client, city });
+              }}
+            />
+            <i className='logo'>
+              <CiUser />
+            </i>
+          </div>
+          <div className='caja-entrada'>
+            <i className='logo'>
+              <CiUser />
+            </i>
+          </div>
+          <div className='caja-entrada'>
+            <input
+              type='text'
+              className='entrada'
+              placeholder='Telefono'
+              onChange={(e) => {
+                const phone = e.target.value;
+                console.log(phone);
+                setClient({ ...client, phone });
+              }}
+            />
             <i className='logo'>
               <CiUser />
             </i>
@@ -42,11 +121,12 @@ export default function formClients() {
             <input
               type='submit'
               className='boton-enviar'
-              value='Crear Cliente'
+              value='Registrar Cliente'
+              onSubmit={handleSubmit}
             />
           </div>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

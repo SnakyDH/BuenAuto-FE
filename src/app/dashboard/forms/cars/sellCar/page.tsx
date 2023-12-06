@@ -1,22 +1,12 @@
 import { CiUser } from 'react-icons/ci';
-import '../estilosFormularios.css';
-
-function fechaActual() {
-  let fecha = new Date();
-  let dia = fecha.getDate();
-  let mes = fecha.getMonth() + 1;
-  let anio = fecha.getFullYear();
-  let fechaActual = `${dia}/${mes}/${anio}`;
-  return fechaActual;
-}
-
-export default function formCars() {
+import '/home/juanpbaucl/Proyectos/React/Autos-Next+/BuenautoF/BuenAuto-FE/src/app/dashboard/forms/estilosFormularios.css';
+export default function sellCar() {
   return (
     <div className='contenedor'>
       <div className='caja-formulario'>
         <div className='contenedor-login' id='login'>
           <div className='encabezado'>
-            <h1 className='titulo'>Ingresar Vehiculo</h1>
+            <h1 className='titulo'>Vender Vehiculo</h1>
           </div>
           <div className='caja-entrada'>
             <input
