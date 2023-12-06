@@ -4,18 +4,22 @@ import Navbar from '../components/Navbar';
 import './styleCars.css';
 import CardCars from './components/CardCars';
 
-type Props = {
-  id: string;
+type Car = {
   model: string;
   chassis: string;
   plate: string;
   value: string;
-  line_id: string;
-  color_id: string;
-  type_id: string;
+  line: string;
+  color: string;
 };
 
-export default function adminCars() {
+const getData = async () => {
+  const res = await fetch('http://localhost:3011/vehicle');
+  const data = await res.json();
+  return await data;
+};
+export default async function adminCars() {
+  const dataVehicle = await getData();
   return (
     <>
       <Navbar></Navbar>
@@ -43,7 +47,20 @@ export default function adminCars() {
         <button className='btnUs'>Usados</button>
 
         <div className='contenedor-vehiculos'>
-          <CardCars />
+          {dataVehicle.map((car: any) => {
+            return (
+              <CardCars
+                key={car.id}
+                model={car.model}
+                chassis={car.chassis}
+                plate={car.plate}
+                brand={car.marca}
+                value={car.value}
+                line={car.linea}
+                color={car.color}
+              />
+            );
+          })}
           <div className='caja-vehiculos'>
             <div className='img-vehiculos'>
               <Image src='/img/car1.jpg' width={680} height={480} alt='' />

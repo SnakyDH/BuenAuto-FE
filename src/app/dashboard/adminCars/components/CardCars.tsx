@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 type Props = {
-  id: string;
   model: string;
   chassis: string;
   plate: string;
@@ -10,7 +9,6 @@ type Props = {
   brand: string;
   line: string;
   color: string;
-  type: string;
 };
 
 export default function CardCars({
@@ -21,7 +19,6 @@ export default function CardCars({
   brand,
   line,
   color,
-  type,
 }: Props) {
   return (
     <div className='caja-vehiculos'>
@@ -30,10 +27,10 @@ export default function CardCars({
       </div>
       <p>{model}</p>
       <h3>
-        {brand},{line}
+        {brand}, {line}
       </h3>
       <h2>
-        {value}, {type}
+        {value}
         <span> / Cuotas mensuales</span>
       </h2>
       <p>
