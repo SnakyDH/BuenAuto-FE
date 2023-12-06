@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 type Props = {
   model: string;
-  chassis: string;
   plate: string;
   value: string;
   brand: string;
@@ -13,7 +12,6 @@ type Props = {
 
 export default function CardCars({
   model,
-  chassis,
   plate,
   value,
   brand,
@@ -23,7 +21,7 @@ export default function CardCars({
   return (
     <div className='caja-vehiculos'>
       <div className='img-vehiculos'>
-        <Image src='/img/car1.jpg' width={680} height={480} alt='' />
+        <Image src='/img/car1.jpg' width={780} height={480} alt='' />
       </div>
       <p>{model}</p>
       <h3>
@@ -33,9 +31,9 @@ export default function CardCars({
         {value}
         <span> / Cuotas mensuales</span>
       </h2>
-      <p>
+      <h3>
         {color} , {plate}
-      </p>
+      </h3>
 
       <div className='btn'>
         <Link

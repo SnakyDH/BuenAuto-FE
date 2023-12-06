@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import './styleCars.css';
@@ -6,7 +5,6 @@ import CardCars from './components/CardCars';
 
 type Car = {
   model: string;
-  chassis: string;
   plate: string;
   value: string;
   line: string;
@@ -15,8 +13,9 @@ type Car = {
 
 const getData = async () => {
   const res = await fetch('http://localhost:3011/vehicle');
-  const data = await res.json();
-  return await data;
+  const newVehicle = await res.json();
+  console.log(newVehicle);
+  return await newVehicle;
 };
 export default async function adminCars() {
   const dataVehicle = await getData();
@@ -47,169 +46,19 @@ export default async function adminCars() {
         <button className='btnUs'>Usados</button>
 
         <div className='contenedor-vehiculos'>
-          {dataVehicle.map((car: any) => {
+          {dataVehicle.map((Car: any) => {
             return (
               <CardCars
-                key={car.id}
-                model={car.model}
-                chassis={car.chassis}
-                plate={car.plate}
-                brand={car.marca}
-                value={car.value}
-                line={car.linea}
-                color={car.color}
+                key={Car.id}
+                model={Car.model}
+                plate={Car.plate}
+                brand={Car.marca}
+                value={Car.value}
+                line={Car.linea}
+                color={Car.color}
               />
             );
           })}
-          <div className='caja-vehiculos'>
-            <div className='img-vehiculos'>
-              <Image src='/img/car1.jpg' width={680} height={480} alt='' />
-            </div>
-            <p>2019</p>
-            <h3>Toyota Corolla</h3>
-            <h2>
-              $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
-            </h2>
-            <div className='btn'>
-              <Link
-                href='/dashboard/forms/cars/sellCar'
-                className='navbar__menu--link'
-              >
-                Vender Vehiculo
-              </Link>
-            </div>
-            <a href='#' className='btn'>
-              Actualizar
-            </a>
-            <a href='#' className='btn'>
-              Eliminar
-            </a>
-          </div>
-
-          <div className='caja-vehiculos'>
-            <div className='img-vehiculos'>
-              <Image src='/img/car2.jpg' width={680} height={480} alt='' />
-            </div>
-            <p>2019</p>
-            <h3>Toyota Corolla</h3>
-            <h2>
-              $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
-            </h2>
-            <div className='btn'>
-              <Link
-                href='/dashboard/forms/cars/sellCar'
-                className='navbar__menu--link'
-              >
-                Vender Vehiculo
-              </Link>
-            </div>
-            <a href='#' className='btn'>
-              Actualizar
-            </a>
-            <a href='#' className='btn'>
-              Eliminar
-            </a>
-          </div>
-
-          <div className='caja-vehiculos'>
-            <div className='img-vehiculos'>
-              <Image src='/img/car3.jpg' width={680} height={480} alt='' />
-            </div>
-            <p>2019</p>
-            <h3>Toyota Corolla</h3>
-            <h2>
-              $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
-            </h2>
-            <div className='btn'>
-              <Link
-                href='/dashboard/forms/cars/sellCar'
-                className='navbar__menu--link'
-              >
-                Vender Vehiculo
-              </Link>
-            </div>
-            <a href='#' className='btn'>
-              Actualizar
-            </a>
-            <a href='#' className='btn'>
-              Eliminar
-            </a>
-          </div>
-
-          <div className='caja-vehiculos'>
-            <div className='img-vehiculos'>
-              <Image src='/img/car4.jpg' width={680} height={480} alt='' />
-            </div>
-            <p>2019</p>
-            <h3>Toyota Corolla</h3>
-            <h2>
-              $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
-            </h2>
-            <div className='btn'>
-              <Link
-                href='/dashboard/forms/cars/sellCar'
-                className='navbar__menu--link'
-              >
-                Vender Vehiculo
-              </Link>
-            </div>
-            <a href='#' className='btn'>
-              Actualizar
-            </a>
-            <a href='#' className='btn'>
-              Eliminar
-            </a>
-          </div>
-
-          <div className='caja-vehiculos'>
-            <div className='img-vehiculos'>
-              <Image src='/img/car5.jpg' width={680} height={480} alt='' />
-            </div>
-            <p>2019</p>
-            <h3>Toyota Corolla</h3>
-            <h2>
-              $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
-            </h2>
-            <div className='btn'>
-              <Link
-                href='/dashboard/forms/cars/sellCar'
-                className='navbar__menu--link'
-              >
-                Vender Vehiculo
-              </Link>
-            </div>
-            <a href='#' className='btn'>
-              Actualizar
-            </a>
-            <a href='#' className='btn'>
-              Eliminar
-            </a>
-          </div>
-
-          <div className='caja-vehiculos'>
-            <div className='img-vehiculos'>
-              <Image src='/img/car6.jpg' width={680} height={480} alt='' />
-            </div>
-            <p>2019</p>
-            <h3>Toyota Corolla</h3>
-            <h2>
-              $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
-            </h2>
-            <div className='btn'>
-              <Link
-                href='/dashboard/forms/cars/sellCar'
-                className='navbar__menu--link'
-              >
-                Vender Vehiculo
-              </Link>
-            </div>
-            <a href='#' className='btn'>
-              Actualizar
-            </a>
-            <a href='#' className='btn'>
-              Eliminar
-            </a>
-          </div>
         </div>
       </section>
     </>
