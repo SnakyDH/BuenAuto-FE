@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { BiSolidCartAdd } from 'react-icons/bi';
+import { FaCar } from 'react-icons/fa';
 import './globals.css';
 
 export default function Home() {
@@ -62,7 +64,8 @@ export default function Home() {
 
         <div className='contenedor-servicios'>
           <div className='caja-servicio'>
-            <i className='bx bx-cart-add'></i>
+            <BiSolidCartAdd className='bx' />
+
             <h3> Compra </h3>
             <p>
               {' '}
@@ -78,7 +81,8 @@ export default function Home() {
           </div>
 
           <div className='caja-servicio'>
-            <i className='bx bx-car'></i>
+            <FaCar className='bx' />
+
             <h3> Vende </h3>
             <p>
               {' '}

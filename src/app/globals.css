@@ -20,7 +20,6 @@
     --main-color: #fe5b3d;
     --second-color: #ffac38;
     --text-color: #333;
-    --gradinet: linear-gradient ( #fe5b3d, #ffac38);
 }
 
 /* Custom Scroll Bar */
@@ -216,9 +215,10 @@ header{
     padding: 20px;
 }
 
-.contenedor-servicios .caja-servicio .bx {
-    font-size: 34px;
+.contenedor-servicios .caja-servicio .bx {    
+    font-size: 4rem;
     padding: 10px;
+    margin-left: 23.35rem;
     background-color: #eeeff1;
     border-radius: 0.5rem;
     color: var(--main-color);
@@ -234,8 +234,8 @@ header{
 }
 
 .contenedor-servicios .caja-servicio:hover .bx {
-    background: var(--gradinet);
-    color: #474fa0; /* Cambia el color del texto a blanco */
+    color: #474fa0;
+
 }
 
 .contenedor-servicios .caja-servicio:hover .bxs-car-crash {
