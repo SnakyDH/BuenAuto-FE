@@ -6,6 +6,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './styleOffices.css';
+import Link from 'next/link';
 
 const slidesData = [
   {
@@ -53,7 +54,11 @@ const AdminOffices: React.FC = () => {
         <h1>Sucursales</h1>
       </div>
       <div className='btnSucur'>
-        <button>Agregar Sucursal</button>
+        <button>
+          <Link href='/dashboard/Forms/office' className='navbar__menu--link'>
+            Agregar Empleado
+          </Link>
+        </button>
       </div>
       <div className='slider'>
         <Slider {...settings}>

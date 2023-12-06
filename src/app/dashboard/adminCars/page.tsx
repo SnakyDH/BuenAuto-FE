@@ -1,6 +1,19 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import './styleCars.css';
+import CardCars from './components/CardCars';
+
+type Props = {
+  id: string;
+  model: string;
+  chassis: string;
+  plate: string;
+  value: string;
+  line_id: string;
+  color_id: string;
+  type_id: string;
+};
 
 export default function adminCars() {
   return (
@@ -18,7 +31,11 @@ export default function adminCars() {
         <div className='buscador'>
           <input className='barr' type='text' placeholder='Buscar vehiculos' />
           <button className='btn'>Buscar</button>
-          <button className='btn'>Añadir Vehiculo</button>
+          <button className='btn'>
+            <Link href='/dashboard/forms/cars' className='navbar__menu--link'>
+              Comprar Vehiculo
+            </Link>
+          </button>
         </div>
 
         <button className='btnUs'>Todos</button>
@@ -26,6 +43,7 @@ export default function adminCars() {
         <button className='btnUs'>Usados</button>
 
         <div className='contenedor-vehiculos'>
+          <CardCars />
           <div className='caja-vehiculos'>
             <div className='img-vehiculos'>
               <Image src='/img/car1.jpg' width={680} height={480} alt='' />
@@ -35,9 +53,14 @@ export default function adminCars() {
             <h2>
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
-            <a href='#' className='btn'>
-              Compralo ahora
-            </a>
+            <div className='btn'>
+              <Link
+                href='/dashboard/forms/cars/sellCar'
+                className='navbar__menu--link'
+              >
+                Vender Vehiculo
+              </Link>
+            </div>
             <a href='#' className='btn'>
               Actualizar
             </a>
@@ -55,9 +78,14 @@ export default function adminCars() {
             <h2>
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
-            <a href='#' className='btn'>
-              Compralo ahora
-            </a>
+            <div className='btn'>
+              <Link
+                href='/dashboard/forms/cars/sellCar'
+                className='navbar__menu--link'
+              >
+                Vender Vehiculo
+              </Link>
+            </div>
             <a href='#' className='btn'>
               Actualizar
             </a>
@@ -75,9 +103,14 @@ export default function adminCars() {
             <h2>
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
-            <a href='#' className='btn'>
-              Compralo ahora
-            </a>
+            <div className='btn'>
+              <Link
+                href='/dashboard/forms/cars/sellCar'
+                className='navbar__menu--link'
+              >
+                Vender Vehiculo
+              </Link>
+            </div>
             <a href='#' className='btn'>
               Actualizar
             </a>
@@ -95,9 +128,14 @@ export default function adminCars() {
             <h2>
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
-            <a href='#' className='btn'>
-              Compralo ahora
-            </a>
+            <div className='btn'>
+              <Link
+                href='/dashboard/forms/cars/sellCar'
+                className='navbar__menu--link'
+              >
+                Vender Vehiculo
+              </Link>
+            </div>
             <a href='#' className='btn'>
               Actualizar
             </a>
@@ -115,9 +153,14 @@ export default function adminCars() {
             <h2>
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
-            <a href='#' className='btn'>
-              Compralo ahora
-            </a>
+            <div className='btn'>
+              <Link
+                href='/dashboard/forms/cars/sellCar'
+                className='navbar__menu--link'
+              >
+                Vender Vehiculo
+              </Link>
+            </div>
             <a href='#' className='btn'>
               Actualizar
             </a>
@@ -135,9 +178,14 @@ export default function adminCars() {
             <h2>
               $110.000.000 | $ 1.500.000 <span> / Cuotas mensuales</span>
             </h2>
-            <a href='#' className='btn'>
-              Compralo ahora
-            </a>
+            <div className='btn'>
+              <Link
+                href='/dashboard/forms/cars/sellCar'
+                className='navbar__menu--link'
+              >
+                Vender Vehiculo
+              </Link>
+            </div>
             <a href='#' className='btn'>
               Actualizar
             </a>
